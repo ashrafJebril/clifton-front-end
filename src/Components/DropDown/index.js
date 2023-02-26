@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { useState } from "react";
 
-const DropDown = () => {
-  const [showComponent, setShowComponent] = useState(true);
+const DropDown = ({ title }) => {
+  const [showComponent, setShowComponent] = useState(false);
 
   const handleClick = (payload) => {
     console.log(payload);
@@ -14,26 +14,28 @@ const DropDown = () => {
     setShowComponent(false);
   };
   return (
-    <div className="w-full bg-red-400  w-[30%]  oveflow-hidden ">
+    <div className="w-full   w-full   oveflow-hidden ">
       <div className="relative">
         <div
           onClick={() => handleClick(true)}
-          className="w-[30%] h-24 ml-64   rounded-[100px] flex items-center justify-between px-6  "
+          className="w-full h-24 rounded-[100px] flex items-center px-6 justify-between"
           style={{ background: "#683F99" }}
         >
-          <div className="text-5xl text-white font-[700]">Corporate Event</div>
+          <div className="text-5xl text-white font-[700]">{title}</div>
 
           <KeyboardArrowDownIcon style={{ color: "white", fontSize: "30px" }} />
         </div>
         {showComponent && (
           <div
-            className="w-full p-4 absolute rounded-lg flex flex-col gap-y-2"
+            className={`w-full p-4 absolute rounded-lg flex flex-col gap-y-2 ${
+              title == "Corporate Event" ? "-mt-48" : "-mt-24"
+            } `}
             style={{ background: "#683F99", zIndex: "100" }}
           >
             <div className="text-white font-[700] text-2xl justify-between flex">
               <div> Corporate Event</div>
               <div
-                className="bg-red-400"
+                className="cursor-pointer"
                 onClick={() => handleClickClose(false)}
               >
                 x
