@@ -2,9 +2,9 @@ import PageMainImage from "../../Components/PageMainImage/index";
 import Head from "../../Components/Head/index";
 
 import { fetchQuery } from "../../util";
-const CeoMessage = ({ message }) => {
-  const imgUrl = message.main_image
-    ? message.main_image.data.attributes.url
+const EsgStatment = ({ statment }) => {
+  const imgUrl = statment.main_image
+    ? statment.main_image.data.attributes.url
     : "";
 
   return (
@@ -13,16 +13,16 @@ const CeoMessage = ({ message }) => {
         title="career"
         description="this is a test description for career "
       />
-      <PageMainImage mainImage={imgUrl} title={careers.title} />
+      <PageMainImage mainImage={imgUrl} title={statment.title} />
     </div>
   );
 };
 
-export default CeoMessage;
+export default EsgStatment;
 export async function getServerSideProps() {
-  const response = await fetchQuery("career?populate=deep");
+  const response = await fetchQuery("seg-statment?populate=deep");
 
   return {
-    props: { message: response.data.attributes },
+    props: { statment: response.data.attributes },
   };
 }

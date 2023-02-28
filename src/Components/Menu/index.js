@@ -7,45 +7,45 @@ const Menu = ({ closeMenu }) => {
       title: "Discover Cliftons",
       childs: [
         { title: "Our Story", link: "/about-us/story" },
-        { title: "CEO’s Message", link: "/about/story" },
-        { title: "ESG Statement", link: "/about/story" },
-        { title: "Art Statement", link: "/about/story" },
-        { title: "Workplace", link: "/about/story" },
-        { title: "Careers", link: "/about/story" },
+        { title: "CEO’s Message", link: "/about-us/ceo-message" },
+        { title: "ESG Statement", link: "/about-us/esg-statment" },
+        { title: "Art Statement", link: "/about-us/art-prize" },
+        { title: "Workplace", link: "/about-us/work-place" },
+        { title: "Careers", link: "/about-us/careers" },
       ],
     },
     {
       title: "Events",
       childs: [
-        { title: "In Venue", link: "/about/story" },
-        { title: "Hybrid", link: "/about/story" },
-        { title: "Virtual", link: "/about/story" },
-        { title: "Spaces", link: "/about/story" },
-        { title: "Be Safe", link: "/about/story" },
+        { title: "In Venue", link: "/about-us/story" },
+        { title: "Hybrid", link: "/about-us/story" },
+        { title: "Virtual", link: "/about-us/story" },
+        { title: "Spaces", link: "/about-us/story" },
+        { title: "Be Safe", link: "/about-us/story" },
       ],
     },
     {
       title: "Locations",
       childs: [
-        { title: "Australia", link: "/about/story" },
-        { title: "New Zealand", link: "/about/story" },
-        { title: "Hong Kong", link: "/about/story" },
-        { title: "London", link: "/about/story" },
-        { title: "New York City", link: "/about/story" },
-        { title: "Singapore", link: "/about/story" },
-        { title: "Global (All)", link: "/about/story" },
+        { title: "Australia", link: "/about-us/story" },
+        { title: "New Zealand", link: "/about-us/story" },
+        { title: "Hong Kong", link: "/about-us/story" },
+        { title: "London", link: "/about-us/story" },
+        { title: "New York City", link: "/about-us/story" },
+        { title: "Singapore", link: "/about-us/story" },
+        { title: "Global (All)", link: "/about-us/story" },
       ],
     },
     {
       title: "Services",
       childs: [
-        { title: "Event Management", link: "/about/story" },
-        { title: "Clifton’s Studio", link: "/about/story" },
-        { title: "Event Production", link: "/about/story" },
-        { title: "Examinations", link: "/about/story" },
-        { title: "Virtual Classroom", link: "/about/story" },
-        { title: "Cuisine", link: "/about/story" },
-        { title: "Team Building", link: "/about/story" },
+        { title: "Event Management", link: "/about-us/story" },
+        { title: "Clifton’s Studio", link: "/about-us/story" },
+        { title: "Event Production", link: "/about-us/story" },
+        { title: "Examinations", link: "/about-us/story" },
+        { title: "Virtual Classroom", link: "/about-us/story" },
+        { title: "Cuisine", link: "/about-us/story" },
+        { title: "Team Building", link: "/about-us/story" },
       ],
     },
   ];
@@ -75,7 +75,7 @@ const Menu = ({ closeMenu }) => {
           </div>
         </div>
       </div>
-      <div className="flex justify-around mt-24">
+      <div className="flex justify-around mt-24 ">
         {menu.map((e) => {
           return (
             <div className="text-white">
@@ -98,20 +98,20 @@ const Menu = ({ closeMenu }) => {
             </div>
           );
         })}
+        <div
+          style={{
+            position: "absolute",
+            width: "1198px",
+            height: "1198px",
+            left: "-509px",
+            top: "353px",
+            zIndex: -1,
+            background:
+              "radial-gradient(50% 50% at 50% 50%, #773ABC 0%, rgba(119, 58, 188, 0) 100%)",
+            opacity: 0.2,
+          }}
+        ></div>
       </div>
-      <div
-        style={{
-          position: "absolute",
-          width: "1198px",
-          height: "1198px",
-          left: "-509px",
-          top: "353px",
-
-          background:
-            " radial-gradient(50% 50% at 50% 50%, #773ABC 0%, rgba(119, 58, 188, 0) 100%)",
-          opacity: 0.2,
-        }}
-      ></div>
     </menu>
   );
 };

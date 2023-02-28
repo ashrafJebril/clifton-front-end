@@ -18,26 +18,11 @@ const Careers = ({ art }) => {
   );
 };
 
-// const mapState = (state) => ({
-//   careers: state.about.data,
-// });
-// const mapDispatch = (dispatch) => ({
-//   getCareers: () => dispatch.about.getCareers(),
-// });
-
 export default Careers;
 export async function getServerSideProps() {
-  // Call the fetch method and passing
-  // the pokeAPI link
   const response = await fetchQuery("art-prize?populate=deep");
   console.log();
   return {
     props: { art: response.data.attributes },
   };
 }
-
-// Parse the JSON
-// const data = await response.json();
-// return {
-//   props: { allPokemons: response },
-// };
