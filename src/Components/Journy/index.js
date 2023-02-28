@@ -5,7 +5,9 @@ import Step3 from "./step3";
 
 const Journy = () => {
   const [component, setComponent] = useState(0);
-
+  const back = () => {
+    setComponent(component - 1);
+  };
   const next = () => {
     if (component === componentsArr.length - 1) {
       setComponent(0);
@@ -14,9 +16,9 @@ const Journy = () => {
     }
   };
   const componentsArr = [
-    <Step1 next={next} />,
-    <Step2 next={next} />,
-    <Step3 next={next} />,
+    <Step1 next={next} back={back} />,
+    <Step2 next={next} back={back} />,
+    <Step3 next={next} back={back} />,
   ];
   return <div className="min-h-screen w-full ">{componentsArr[component]}</div>;
 };

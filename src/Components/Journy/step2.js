@@ -1,13 +1,14 @@
 import backImage from "../../images/Swirl.svg";
-import DropDown from "../DropDown/index";
-
-const step1 = ({ next }) => {
+import BackButton from "../../Components/BackButton";
+const step1 = ({ next, back }) => {
   return (
-    <div className="min-h-screen flex items-center w-full justify-center  ">
-      <div className="absolute bottom-0 right-0 ">
+    <div className="min-h-screen flex items-center w-full justify-center">
+      <div className="absolute bottom-0 right-0">
         <img src={backImage.src} className="-mt-8"></img>
       </div>
-      <div className=" w-3/4  ">
+
+      <div className="w-3/4">
+        <BackButton back={back} />
         <div className="flex w-full gap-x-4">
           <div
             className="w-1/4 h-48 flex items-center rounded"
@@ -15,8 +16,7 @@ const step1 = ({ next }) => {
               backgroundColor: "rgba(255, 255, 255, 0.1)",
             }}
           >
-            <div className="absolute z-10  ml-6 font-bold">
-              {/* The `backgroundColor` property is used here instead of the `background` property */}
+            <div className="absolute ml-6 font-bold">
               <div className="text-white text-[18px]">Small group of</div>
               <div className="text-white text-[55px]">1-50</div>
             </div>
@@ -27,8 +27,7 @@ const step1 = ({ next }) => {
               backgroundColor: "rgba(255, 255, 255, 0.1)",
             }}
           >
-            <div className="absolute z-10  ml-6 font-bold">
-              {/* The `backgroundColor` property is used here instead of the `background` property */}
+            <div className="absolute  ml-6 font-bold">
               <div className="text-white text-[18px]">Medium group of</div>
               <div className="text-white text-[55px]">50-100</div>
             </div>
@@ -39,8 +38,7 @@ const step1 = ({ next }) => {
               backgroundColor: "rgba(255, 255, 255, 0.1)",
             }}
           >
-            <div className="absolute z-10  ml-6 font-bold">
-              {/* The `backgroundColor` property is used here instead of the `background` property */}
+            <div className="absolute   ml-6 font-bold">
               <div className="text-white text-[18px]">Large crowd of</div>
               <div className="text-white text-[55px]">100+</div>
             </div>
@@ -51,8 +49,7 @@ const step1 = ({ next }) => {
               backgroundColor: "rgba(255, 255, 255, 0.1)",
             }}
           >
-            <div className="absolute z-10  ml-6 font-bold">
-              {/* The `backgroundColor` property is used here instead of the `background` property */}
+            <div className="absolute   ml-6 font-bold">
               <div className="text-white text-[18px]">Other (enter number)</div>
               <div className="text-white text-[55px] ">
                 <input
@@ -71,7 +68,7 @@ const step1 = ({ next }) => {
         </div>
         <button
           onClick={next}
-          className="bg-[#007DE6] mt-16 w-fit w-[159px] text-center rounded-[100px] h-[52px] flex items-center justify-center text-white"
+          className="bg-[#007DE6] mt-24 w-fit px-6 text-center rounded-[100px] h-[50px] flex items-center justify-center text-white"
         >
           CONTINUE
         </button>

@@ -2,10 +2,9 @@ import PageMainImage from "../../Components/PageMainImage/index";
 import Head from "../../Components/Head/index";
 
 import { fetchQuery } from "../../util";
-const Careers = ({ careers }) => {
-  console.log(careers);
-  const imgUrl = careers.main_image
-    ? careers.main_image.data.attributes.url
+const CeoMessage = ({ message }) => {
+  const imgUrl = message.main_image
+    ? message.main_image.data.attributes.url
     : "";
 
   return (
@@ -19,11 +18,11 @@ const Careers = ({ careers }) => {
   );
 };
 
-export default Careers;
+export default CeoMessage;
 export async function getServerSideProps() {
   const response = await fetchQuery("career?populate=deep");
 
   return {
-    props: { careers: response.data.attributes },
+    props: { message: response.data.attributes },
   };
 }
