@@ -2,20 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-.slide-up-enter {
-  transform: translateY(100%);
+.css-eg0mwd-MuiSlider-thumb {
+  position: absolute;
+  width: 55px !important;
+  height: 55px !important;
 }
 
-.slide-up-enter-active {
-  transform: translateY(0);
-  transition: transform 300ms ease-in-out;
-}
-
-.slide-up-exit {
-  transform: translateY(0);
-}
-
-.slide-up-exit-active {
-  transform: translateY(100%);
-  transition: transform 300ms ease-in-out;
+.css-14pt78w-MuiSlider-rail {
+  background-color: white !important;
+  opacity: 1 !important;
 }
